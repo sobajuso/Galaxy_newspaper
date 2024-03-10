@@ -24,7 +24,7 @@ echo '
 
 
   <div class = "path_style"> 
-        <div class = "path_style_text_part_1"> <a href="' . $prefix . '" class = "path_style_link"> <div class="test_path">Главная /&nbsp </div> </a> </div>
+        <div class = "path_style_text_part_1"> <a href="index.php?group=0&newseg=0" class = "path_style_link"> <div class="test_path">Главная /&nbsp </div> </a> </div>
         <div class = "path_style_text_part_2"> ' . $particulNews['title'] . '</div>
   </div>
   
