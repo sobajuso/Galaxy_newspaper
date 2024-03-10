@@ -58,7 +58,7 @@ foreach($groupSecondLevel[$bubbleButtonsSect][$bubbleButtonNum] as $newsSection)
 	
 echo '
 <div class="news_content">
-<a href="' . $adressPrefix . '/group=' . $bubbleButtonsSect . '&newseg=' . $bubbleButtonNum .$postfix . (string) $newsSection['id']  . '" class="news_content_button_link">
+<a href="' . $adressPrefix . 'group=' . $bubbleButtonsSect . '&newseg=' . $bubbleButtonNum .$postfix . (string) $newsSection['id']  . '" class="news_content_button_link">
 <div class="data">' . $newsSection['date'] . '</div>
 <div class="news_content_level_II">
 <div class="news_title"><h3>' . $newsSection['title'] . '</h3></div>
@@ -98,7 +98,7 @@ echo '
 /*generate next/previous button*/
 
 if ($bubbleButtonsSect > 0) {
-		echo '<a href="' . $adressPrefix . '/group='. (string)($bubbleButtonsSect - 1) .'&newseg=0" class="next_previous_button_link"><div class="next_previous_button">&#8592</div></a>';
+		echo '<a href="' . $adressPrefix . 'group='. (string)($bubbleButtonsSect - 1) .'&newseg=0" class="next_previous_button_link"><div class="next_previous_button">&#8592</div></a>';
 	};
 
 	$segIndex = 0;
@@ -112,8 +112,8 @@ for($x = $bubbleButtonsSect*3; $x < $bubbleButtonsSect*3 + count($groupSecondLev
 /* Generates links*/	
 	
     if ((int) $buttonText == 3*$bubbleButtonsSect + $bubbleButtonNum + 1) {
-    echo '<a href="' . $adressPrefix .'/group='. $bubbleButtonsSect .'&newseg=' .        $segIndex . '" class = "bubbleButtonHypLink"><div    class="next_previous_button_selected"><div   class="bubbleButtonText">' . $buttonText . '</div></div></a>';
-} else { echo '<a href="' . $adressPrefix . '/group='. $bubbleButtonsSect .'&newseg='. $segIndex . '" class = "bubbleButtonHypLink"><div class="news_switch_section_switch_I"><div class="bubbleButtonText">'. $buttonText .'</div></div></a>';
+    echo '<a href="' . $adressPrefix .'group='. $bubbleButtonsSect .'&newseg=' .        $segIndex . '" class = "bubbleButtonHypLink"><div    class="next_previous_button_selected"><div   class="bubbleButtonText">' . $buttonText . '</div></div></a>';
+} else { echo '<a href="' . $adressPrefix . 'group='. $bubbleButtonsSect .'&newseg='. $segIndex . '" class = "bubbleButtonHypLink"><div class="news_switch_section_switch_I"><div class="bubbleButtonText">'. $buttonText .'</div></div></a>';
 };
     
 
@@ -125,9 +125,9 @@ for($x = $bubbleButtonsSect*3; $x < $bubbleButtonsSect*3 + count($groupSecondLev
 /*generate next/previous button*/
 
 if ($bubbleButtonsSect == 0) {
-		echo '<a href="' . $adressPrefix . '/group='. (string)($bubbleButtonsSect + 1) .'&newseg=0" class="next_previous_button_link"><div class="next_previous_button"> &#8594 </div></a>';
+		echo '<a href="' . $adressPrefix . 'group='. (string)($bubbleButtonsSect + 1) .'&newseg=0" class="next_previous_button_link"><div class="next_previous_button"> &#8594 </div></a>';
 } elseif  ($bubbleButtonsSect > 0 and $bubbleButtonsSect < count($groupSecondLevel)-1) {
-		echo '<a href="' . $adressPrefix . '/group='. (string)($bubbleButtonsSect + 1) .'&newseg=0" class="next_previous_button_link><div class="next_previous_button"> &#8594 </div></a>';
+		echo '<a href="' . $adressPrefix . 'group='. (string)($bubbleButtonsSect + 1) .'&newseg=0" class="next_previous_button_link><div class="next_previous_button"> &#8594 </div></a>';
 	};
 
 

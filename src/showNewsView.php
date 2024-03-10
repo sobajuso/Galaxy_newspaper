@@ -58,7 +58,7 @@ echo '
 
   <div class="news_content_level_II">
     
-    <a href="' . $prefix . '/group=' . $prevGroup .  '&newseg=' . $prevButton . '" class="button_link_style">
+    <a href="' . $prefix . 'group=' . $prevGroup .  '&newseg=' . $prevButton . '" class="button_link_style">
       <div class="open_news_button">
         <div class="arrow_form">&#8592</div>
         <div class="open_news_button_textcontent"> НАЗАД К НОВОСТЯМ </div>
